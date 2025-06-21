@@ -22,12 +22,6 @@ A comprehensive Python toolkit for fundamental image processing operations using
 pip install opencv-python numpy matplotlib
 ```
 
-Or install all dependencies at once:
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Usage
 
 ### Basic Usage
@@ -153,7 +147,7 @@ result = cv2.filter2D(image, -1, kernel)
 ```
 
 ### Image Rotation
-Uses affine transformation with automatic dimension adjustment to prevent cropping.
+Uses affine transformation to rotate the given image at the given angle.
 
 ### Block Averaging
 Reshapes image into blocks and computes average values:
@@ -162,15 +156,4 @@ reshaped = image.reshape(h//block_size, block_size, w//block_size, block_size)
 averages = np.mean(reshaped, axis=(1, 3))
 ```
 
-## Requirements
 
-Create a `requirements.txt` file with:
-```
-opencv-python>=4.5.0
-numpy>=1.19.0
-matplotlib>=3.3.0
-```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
